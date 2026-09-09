@@ -1,0 +1,25 @@
+﻿【编码检查】下面几行应显示正常中文：
+#define MyAppVersion "1.0.220410"
+#define Password 'youpin001'
+#define AppId "{2FE4A8A4-680E-4E1E-B16B-EFB4A1FF0EB6}"
+
+
+[Setup]
+AppSupportURL=https://www.glbwl.com
+AppUpdatesURL=https://www.glbwl.com/gl-vst-wpt.html
+
+;程序右键/属性/详细信息
+VersionInfoDescription=集多厂商高精度64位效果器插件包(直播调试专用)
+VersionInfoVersion=1.5
+VersionInfoProductName= 一键安装 
+VersionInfoProductTextVersion={#MyAppVersion}
+VersionInfoCopyright=有品测试1 
+
+
+
+; Source: "D:\调音资产\VSTplugin\Program Files\VSTPlugins\*"; DestDir: "C:\Program Files\VSTPlugins"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+[Run]
+Filename: "{win}\regedit.exe"; Parameters: "/s ""{tmp}\FabFilter.reg"""; Flags: runhidden waituntilterminated
+; Filename:"{tmp}\vstexe\vcredist_x64_2012.exe"; Parameters: "-s"
+
